@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springBootDemo</artifactId>
+        <groupId>com.sdmjhca</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <jdk.version>1.8</jdk.version>
+
+        <junit.version>4.12</junit.version>
+
+        <fastjson.version>1.2.31</fastjson.version>
+
+        <net.sf.json-lib.version>2.1</net.sf.json-lib.version>
+        <httpclient.version>4.3.3</httpclient.version>
+        <commons-httpclient.version>3.1</commons-httpclient.version>
+
+    </properties>
+    <artifactId>payment-demo</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>${httpclient.version}</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>localRepo</id>
+            <name>local maven repository</name>
+            <url>http://10.10.24.223:8081/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>localPluginRepo</id>
+            <name>localPluginRepo</name>
+            <url>http://10.10.24.223:8081/nexus/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshot</id>
+            <name>local maven repository</name>
+            <url>http://10.10.24.223:8081/nexus/content/repositories/snapshots/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+
+        <repository>
+            <id>release</id>
+            <name>local maven repository</name>
+            <url>http://10.10.24.223:8081/nexus/content/repositories/releases/</url>
+            <uniqueVersion>true</uniqueVersion>
+        </repository>
+    </distributionManagement>
+</project>
