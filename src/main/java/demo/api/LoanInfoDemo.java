@@ -13,6 +13,7 @@ import static demo.utils.StaticParams.*;
 
 /**
  * Created by zhangye on 2017/4/17.
+ * 接受放款信息demo
  */
 public class LoanInfoDemo {
 
